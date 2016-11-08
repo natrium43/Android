@@ -24,8 +24,26 @@ public class Addition extends AppCompatActivity {
         b = (Button) findViewById(R.id.btnAdd);
         ans = (EditText) findViewById(R.id.et3);
 
+        /**
+         * setOnClickListener(anonymous class) is a listener which allows us to put response code in 'onClick'
+         */
+        b.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                int firstNumber = Integer.parseInt(et1.getText().toString());
+                int secondNumber = Integer.parseInt(et2.getText().toString());
+
+                int k = firstNumber + secondNumber;
+
+                ans.setText("Ans is : "+ k);
+            }
+        });
 
     }
+    /**
+     * This method can be attached to the 'onClick' property of the 'add' button.
+     */
     public void add(View v) {
         System.out.println("Clicked on Add");
         int firstNumber = Integer.parseInt(et1.getText().toString());

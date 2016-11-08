@@ -76,6 +76,5 @@
         android:layout_marginTop="32dp"
         android:id="@+id/btnAdd"
         android:layout_below="@+id/et2"
-        android:layout_centerHorizontal="true"
-        android:onClick="add" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
